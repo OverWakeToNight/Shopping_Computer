@@ -2,10 +2,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Posts</h1>
+		<h1>Xem bài viết</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="post-add.php" class="btn btn-primary btn-sm">Add New</a>
+		<a href="post-add.php" class="btn btn-primary btn-sm">Thêm mới</a>
 	</div>
 </section>
 
@@ -22,11 +22,11 @@
 					<table id="example1" class="table table-bordered table-striped">
 						<thead>
 							<tr>
-								<th>SL</th>
-								<th>Thumbnail</th>
-								<th>Title</th>
-								<th>Category</th>
-								<th>Action</th>
+								<th>ID</th>
+								<th>Ảnh tiêu đề</th>
+								<th>Tiêu đề</th>
+								<th>Danh mục</th>
+								<th>Hoạt động</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -73,8 +73,8 @@
 										<?php echo $row['category_name']; ?>
 									</td>
 									<td>										
-										<a href="post-edit.php?id=<?php echo $row['post_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="post-delete.php?id=<?php echo $row['post_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
+										<a href="post-edit.php?id=<?php echo $row['post_id']; ?>" class="btn btn-primary btn-xs">Sửa</a>
+										<a href="#" class="btn btn-danger btn-xs" data-href="post-delete.php?id=<?php echo $row['post_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Xóa</a>  
 									</td>
 								</tr>
 								<?php
@@ -103,7 +103,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <a class="btn btn-danger btn-ok">Xóa</a>
             </div>
         </div>
     </div>

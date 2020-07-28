@@ -6,17 +6,17 @@ if(isset($_POST['form1'])) {
 
 	if(empty($_POST['name'])) {
 		$valid = 0;
-		$error_message .= 'Name can not be empty<br>';
+		$error_message .= 'Tên không được để trống<br>';
 	}
 
 	if(empty($_POST['designation'])) {
 		$valid = 0;
-		$error_message .= 'Designation can not be empty<br>';
+		$error_message .= 'Chứng thực không được để trống<br>';
 	}
 
 	if(empty($_POST['company'])) {
 		$valid = 0;
-		$error_message .= 'Company Name can not be empty<br>';
+		$error_message .= 'Tên công ty không được để trống<br>';
 	}
 
 	
@@ -28,13 +28,13 @@ if(isset($_POST['form1'])) {
         $file_name = basename( $path, '.' . $ext );
         if( $ext!='jpg' && $ext!='png' && $ext!='jpeg' && $ext!='gif' ) {
             $valid = 0;
-            $error_message .= 'You must have to upload jpg, jpeg, gif or png file<br>';
+            $error_message .= 'Bạn phải tải lên tệp JPG, JPEG, GIF hoặc PNG<br>';
         }
     }
 
     if(empty($_POST['comment'])) {
 		$valid = 0;
-		$error_message .= 'Comment can not be empty<br>';
+		$error_message .= 'Bình luận không được để trống<br>';
 	}
 
 	if($valid == 1) {
@@ -53,7 +53,7 @@ if(isset($_POST['form1'])) {
     		$statement->execute(array($_POST['name'],$_POST['designation'],$_POST['company'],$final_name,$_POST['comment'],$_REQUEST['id']));
 		}	   
 
-	    $success_message = 'Testimonial is updated successfully!';
+	    $success_message = 'Chứng thực cập nhật thành công!';
 	}
 }
 ?>
@@ -121,37 +121,37 @@ foreach ($result as $row) {
 				<div class="box box-info">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Name <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Tên <span>*</span></label>
 							<div class="col-sm-6">
 								<input type="text" autocomplete="off" class="form-control" name="name" value="<?php echo $name; ?>">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Designation <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Chứng thực <span>*</span></label>
 							<div class="col-sm-6">
 								<input type="text" autocomplete="off" class="form-control" name="designation" value="<?php echo $designation; ?>">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Company <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Công ty <span>*</span></label>
 							<div class="col-sm-6">
 								<input type="text" autocomplete="off" class="form-control" name="company" value="<?php echo $company; ?>">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Existing Photo</label>
+							<label for="" class="col-sm-2 control-label">Hình ảnh tồn tại</label>
 							<div class="col-sm-9" style="padding-top:5px">
 								<img src="../assets/uploads/<?php echo $photo; ?>" alt="Slider Photo" style="width:180px;">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Photo </label>
+							<label for="" class="col-sm-2 control-label">Hình </label>
 							<div class="col-sm-6" style="padding-top:5px">
-								<input type="file" name="photo">(Only jpg, jpeg, gif and png are allowed)
+								<input type="file" name="photo">(Chỉ jpg, jpeg, gif and png được phép)
 							</div>
 						</div>						
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Comment <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Bình luận <span>*</span></label>
 							<div class="col-sm-6">
 								<textarea class="form-control" name="comment" style="height:140px;"><?php echo $comment; ?></textarea>
 							</div>
@@ -159,7 +159,7 @@ foreach ($result as $row) {
 						<div class="form-group">
 							<label for="" class="col-sm-2 control-label"></label>
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-success pull-left" name="form1">Submit</button>
+								<button type="submit" class="btn btn-success pull-left" name="form1">Chấp nhận</button>
 							</div>
 						</div>
 					</div>

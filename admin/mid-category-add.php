@@ -61,10 +61,10 @@ if(isset($_POST['form1'])) {
 				<div class="box box-info">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Top Level Category Name <span>*</span></label>
+							<label for="" class="col-sm-3 control-label">Tên danh mục trung <span>*</span></label>
 							<div class="col-sm-4">
 								<select name="tcat_id" class="form-control select2">
-									<option value="">Select Top Level Category</option>
+									<option value="">Chọn tên danh mục trung</option>
 									<?php
 									$statement = $pdo->prepare("SELECT * FROM tbl_top_category ORDER BY tcat_name ASC");
 									$statement->execute();
@@ -79,7 +79,7 @@ if(isset($_POST['form1'])) {
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Mid Level Category Name <span>*</span></label>
+							<label for="" class="col-sm-3 control-label">Tên danh mục thấp <span>*</span></label>
 							<div class="col-sm-4">
 								<input type="text" class="form-control" name="mcat_name">
 							</div>
@@ -88,7 +88,7 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label"></label>
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-success pull-left" name="form1">Submit</button>
+								<button type="submit" class="btn btn-success pull-left" name="form1">Chấp nhận</button>
 							</div>
 						</div>
 					</div>

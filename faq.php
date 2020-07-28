@@ -37,7 +37,7 @@ foreach ($result as $row) {
                             </div>
                             <div id="question<?php echo $row['faq_id']; ?>" class="panel-collapse collapse" style="height: 0px;">
                                 <div class="panel-body">
-                                    <h5><span class="label label-primary">Answer</span></h5>
+                                    <h5><span class="label label-primary">Câu trả lời</span></h5>
                                     <p>
                                         <?php echo $row['faq_content']; ?>
                                     </p>

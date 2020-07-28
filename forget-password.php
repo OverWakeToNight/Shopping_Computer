@@ -51,11 +51,11 @@ if(isset($_POST['form1'])) {
         
         $to      = $_POST['cust_email'];
         $subject = LANG_VALUE_143;
-        $headers = "From: noreply@" . BASE_URL . "\r\n" .
-                   "Reply-To: noreply@" . BASE_URL . "\r\n" .
+        $headers = "Từ: noreply@" . BASE_URL . "\r\n" .
+                   "Trả lời-đến: noreply@" . BASE_URL . "\r\n" .
                    "X-Mailer: PHP/" . phpversion() . "\r\n" . 
                    "MIME-Version: 1.0\r\n" . 
-                   "Content-Type: text/html; charset=ISO-8859-1\r\n";
+                   "Loại-Nội dung: text/html; charset=ISO-8859-1\r\n";
 
         mail($to, $subject, $message, $headers);
 

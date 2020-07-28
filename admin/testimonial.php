@@ -2,10 +2,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Testimonials</h1>
+		<h1>Xem chứng thực</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="testimonial-add.php" class="btn btn-primary btn-sm">Add Testimonial</a>
+		<a href="testimonial-add.php" class="btn btn-primary btn-sm">Thêm chứng thực</a>
 	</div>
 </section>
 
@@ -17,13 +17,13 @@
 					<table id="example1" class="table table-bordered table-striped">
 						<thead>
 							<tr>
-								<th width="30">SL</th>
-								<th>Photo</th>
-								<th width="100">Name</th>
-								<th width="100">Designation</th>
-								<th width="100">Company</th>
-								<th>Comment</th>
-								<th width="80">Action</th>
+								<th width="30">ID</th>
+								<th>Hình</th>
+								<th width="100">Tên</th>
+								<th width="100">Chỉ định</th>
+								<th width="100">Công ty</th>
+								<th>Bình luận</th>
+								<th width="80">Hoạt động</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -54,8 +54,8 @@
 									<td><?php echo $row['company']; ?></td>
 									<td><?php echo $row['comment']; ?></td>
 									<td>										
-										<a href="testimonial-edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="testimonial-delete.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
+										<a href="testimonial-edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-xs">Sửa</a>
+										<a href="#" class="btn btn-danger btn-xs" data-href="testimonial-delete.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete">Xóa</a>  
 									</td>
 								</tr>
 								<?php

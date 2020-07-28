@@ -6,11 +6,11 @@ if(isset($_POST['form1'])) {
     $valid = 1;
     if(empty($_POST['subject_text'])) {
         $valid = 0;
-        $error_message .= 'Subject can not be empty\n';
+        $error_message .= 'Đối tượng không thể trống\n';
     }
     if(empty($_POST['message_text'])) {
         $valid = 0;
-        $error_message .= 'Subject can not be empty\n';
+        $error_message .= 'Đối tượng không thể trống\n';
     }
     if($valid == 1) {
 
@@ -113,10 +113,10 @@ Unit Price: '.$row['unit_price'].'<br>
             $mail->Body = $message;
             $mail->send();
 
-            $success_message = 'Your email to customer is sent successfully.';   
+            $success_message = 'Email của chúng tôi cho khách hàng được gửi thành công.';   
         } catch (Exception $e) {
-            echo 'Message could not be sent.';
-            echo 'Mailer Error: ' . $mail->ErrorInfo;
+            echo 'Không thể gửi thư.';
+            echo 'Mailer Lỗi: ' . $mail->ErrorInfo;
         }
         
         
@@ -135,7 +135,7 @@ if($success_message != '') {
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Orders</h1>
+		<h1>Xem đặt hàng</h1>
 	</div>
 </section>
 
@@ -152,16 +152,16 @@ if($success_message != '') {
           <table id="example1" class="table table-bordered table-striped">
 			<thead>
 			    <tr>
-			        <th>SL</th>
-                    <th>Customer Details</th>
-			        <th>Product Details</th>
+			        <th>ID</th>
+                    <th>Chi tiết khách hàng</th>
+			        <th>Sản phẩm chi tiết</th>
                     <th>
-                    	Payment Information
+                    	Thông tin thanh toán
                     </th>
-                    <th>Paid Amount</th>
-                    <th>Payment Status</th>
-                    <th>Shipping Status</th>
-			        <th>Action</th>
+                    <th>Trả tiền</th>
+                    <th>Trạng thái thanh toán</th>
+                    <th>Trạng thái giao hàng</th>
+			        <th>Hoạt động</th>
 			    </tr>
 			</thead>
             <tbody>
@@ -177,7 +177,7 @@ if($success_message != '') {
 	                    <td><?php echo $i; ?></td>
 	                    <td>
                             <b>Id:</b> <?php echo $row['customer_id']; ?><br>
-                            <b>Name:</b><br> <?php echo $row['customer_name']; ?><br>
+                            <b>Tên:</b><br> <?php echo $row['customer_name']; ?><br>
                             <b>Email:</b><br> <?php echo $row['customer_email']; ?><br><br>
                             <a href="#" data-toggle="modal" data-target="#model-<?php echo $i; ?>"class="btn btn-warning btn-xs" style="width:100%;margin-bottom:4px;">Gửi tin nhắn</a>
                             <div id="model-<?php echo $i; ?>" class="modal fade" role="dialog">
@@ -193,13 +193,13 @@ if($success_message != '') {
                                                 <input type="hidden" name="payment_id" value="<?php echo $row['payment_id']; ?>">
 												<table class="table table-bordered">
 													<tr>
-														<td>Subject</td>
+														<td>Đối tượng</td>
 														<td>
                                                             <input type="text" name="subject_text" class="form-control" style="width: 100%;">
 														</td>
 													</tr>
                                                     <tr>
-                                                        <td>Message</td>
+                                                        <td>Tin nhắn</td>
                                                         <td>
                                                             <textarea name="message_text" class="form-control" cols="30" rows="10" style="width:100%;height: 200px;"></textarea>
                                                         </td>
@@ -212,7 +212,7 @@ if($success_message != '') {
 											</form>
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">Thoát</button>
 										</div>
 									</div>
 								</div>
@@ -235,24 +235,24 @@ if($success_message != '') {
                         </td>
                         <td>
                         	<?php if($row['payment_method'] == 'PayPal'): ?>
-                        		<b>Payment Method:</b> <?php echo '<span style="color:red;"><b>'.$row['payment_method'].'</b></span>'; ?><br>
-                        		<b>Payment Id:</b> <?php echo $row['payment_id']; ?><br>
-                        		<b>Date:</b> <?php echo $row['payment_date']; ?><br>
-                        		<b>Transaction Id:</b> <?php echo $row['txnid']; ?><br>
+                        		<b>Hình thức thanh toán:</b> <?php echo '<span style="color:red;"><b>'.$row['payment_method'].'</b></span>'; ?><br>
+                        		<b>ID thanh toán:</b> <?php echo $row['payment_id']; ?><br>
+                        		<b>Ngày:</b> <?php echo $row['payment_date']; ?><br>
+                        		<b>ID giao dịch:</b> <?php echo $row['txnid']; ?><br>
                         	<?php elseif($row['payment_method'] == 'Stripe'): ?>
-                        		<b>Payment Method:</b> <?php echo '<span style="color:red;"><b>'.$row['payment_method'].'</b></span>'; ?><br>
-                        		<b>Payment Id:</b> <?php echo $row['payment_id']; ?><br>
-								<b>Date:</b> <?php echo $row['payment_date']; ?><br>
-                        		<b>Transaction Id:</b> <?php echo $row['txnid']; ?><br>
-                        		<b>Card Number:</b> <?php echo $row['card_number']; ?><br>
-                        		<b>Card CVV:</b> <?php echo $row['card_cvv']; ?><br>
-                        		<b>Expire Month:</b> <?php echo $row['card_month']; ?><br>
-                        		<b>Expire Year:</b> <?php echo $row['card_year']; ?><br>
+                        		<b>Hình thức thanh toán:</b> <?php echo '<span style="color:red;"><b>'.$row['payment_method'].'</b></span>'; ?><br>
+                        		<b>ID thanh toán:</b> <?php echo $row['payment_id']; ?><br>
+								<b>Ngày:</b> <?php echo $row['payment_date']; ?><br>
+                        		<b>ID giao dịch:</b> <?php echo $row['txnid']; ?><br>
+                        		<b>Số thẻ:</b> <?php echo $row['card_number']; ?><br>
+                        		<b>Số CVV:</b> <?php echo $row['card_cvv']; ?><br>
+                        		<b>Tháng sử dụng:</b> <?php echo $row['card_month']; ?><br>
+                        		<b>Năm sử dụng:</b> <?php echo $row['card_year']; ?><br>
                         	<?php elseif($row['payment_method'] == 'Bank Deposit'): ?>
-                        		<b>Payment Method:</b> <?php echo '<span style="color:red;"><b>'.$row['payment_method'].'</b></span>'; ?><br>
-                        		<b>Payment Id:</b> <?php echo $row['payment_id']; ?><br>
-								<b>Date:</b> <?php echo $row['payment_date']; ?><br>
-                        		<b>Transaction Information:</b> <br><?php echo $row['bank_transaction_info']; ?><br>
+                        		<b>Hình thức thanh toán:</b> <?php echo '<span style="color:red;"><b>'.$row['payment_method'].'</b></span>'; ?><br>
+                        		<b>ID thanh toán:</b> <?php echo $row['payment_id']; ?><br>
+								<b>Ngày:</b> <?php echo $row['payment_date']; ?><br>
+                        		<b>Thông tin giao dịch:</b> <br><?php echo $row['bank_transaction_info']; ?><br>
                         	<?php endif; ?>
                         </td>
                         <td><?php echo $row['paid_amount']; ?></td>
@@ -262,7 +262,7 @@ if($success_message != '') {
                             <?php
                                 if($row['payment_status']=='Pending'){
                                     ?>
-                                    <a href="order-change-status.php?id=<?php echo $row['id']; ?>&task=Completed" class="btn btn-warning btn-xs" style="width:100%;margin-bottom:4px;">Make Completed</a>
+                                    <a href="order-change-status.php?id=<?php echo $row['id']; ?>&task=Completed" class="btn btn-warning btn-xs" style="width:100%;margin-bottom:4px;">Làm xong</a>
                                     <?php
                                 }
                             ?>
@@ -274,14 +274,14 @@ if($success_message != '') {
                             if($row['payment_status']=='Completed') {
                                 if($row['shipping_status']=='Pending'){
                                     ?>
-                                    <a href="shipping-change-status.php?id=<?php echo $row['id']; ?>&task=Completed" class="btn btn-warning btn-xs" style="width:100%;margin-bottom:4px;">Make Completed</a>
+                                    <a href="shipping-change-status.php?id=<?php echo $row['id']; ?>&task=Completed" class="btn btn-warning btn-xs" style="width:100%;margin-bottom:4px;">Làm xong</a>
                                     <?php
                                 }
                             }
                             ?>
                         </td>
 	                    <td>
-                            <a href="#" class="btn btn-danger btn-xs" data-href="order-delete.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete" style="width:100%;">Delete</a>
+                            <a href="#" class="btn btn-danger btn-xs" data-href="order-delete.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete" style="width:100%;">Xóa</a>
 	                    </td>
 	                </tr>
             		<?php
@@ -308,7 +308,7 @@ if($success_message != '') {
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <a class="btn btn-danger btn-ok">Xóa</a>
             </div>
         </div>
     </div>

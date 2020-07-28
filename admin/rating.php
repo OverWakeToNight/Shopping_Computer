@@ -2,7 +2,7 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Ratings</h1>
+		<h1>Xem đánh giá</h1>
 	</div>
 </section>
 
@@ -19,12 +19,12 @@
           <table id="example1" class="table table-bordered table-striped">
 			<thead>
 			    <tr>
-			        <th>SL</th>
-			        <th>Product</th>
-			        <th>Customer</th>
-			        <th>Rating</th>
-			        <th>Comment</th>
-			        <th>Action</th>
+			        <th>ID</th>
+			        <th>Sản phẩm</th>
+			        <th>Khách hàng</th>
+			        <th>Đánh giá</th>
+			        <th>Bình luận</th>
+			        <th>Hoạt động</th>
 			    </tr>
 			</thead>
             <tbody>
@@ -49,13 +49,13 @@
 	                    	<?php echo $row['p_name']; ?>
 	                    </td>
 	                    <td>
-	                    	Name: <?php echo $row['cust_name']; ?><br>
+	                    	Tên: <?php echo $row['cust_name']; ?><br>
 	                    	Email: <?php echo $row['cust_email']; ?>
 	                    </td>
 	                    <td><?php echo $row['comment']; ?></td>
 	                    <td><?php echo $row['rating']; ?></td>
 	                    <td>
-	                        <a href="#" class="btn btn-danger btn-xs" data-href="rating-delete.php?id=<?php echo $row['rt_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
+	                        <a href="#" class="btn btn-danger btn-xs" data-href="rating-delete.php?id=<?php echo $row['rt_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Xóa</a>
 	                    </td>
 	                </tr>
             		<?php
@@ -82,7 +82,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <a class="btn btn-danger btn-ok">Xóa</a>
             </div>
         </div>
     </div>

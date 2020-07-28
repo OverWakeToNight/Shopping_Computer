@@ -6,7 +6,7 @@ if(isset($_POST['form1'])) {
 
 	if(empty($_POST['post_title'])) {
 		$valid = 0;
-		$error_message .= 'Post title can not be empty<br>';
+		$error_message .= 'Tiêu đề bài viết không thể trống<br>';
 	} else {
 		// Duplicate Checking
     	$statement = $pdo->prepare("SELECT * FROM tbl_post WHERE post_title=?");
@@ -14,23 +14,23 @@ if(isset($_POST['form1'])) {
     	$total = $statement->rowCount();
     	if($total) {
     		$valid = 0;
-        	$error_message .= "Post title already exists<br>";
+        	$error_message .= "Tiêu đề bài đã tồn tại<br>";
     	}
 	}
 
 	if(empty($_POST['post_content'])) {
 		$valid = 0;
-		$error_message .= 'Post content can not be empty<br>';
+		$error_message .= 'Đăng nội dung không thể trống<br>';
 	}
 
 	if(empty($_POST['post_date'])) {
 		$valid = 0;
-		$error_message .= 'Post publish date can not be empty<br>';
+		$error_message .= 'Đăng xuất bản ngày không có sản phẩm nào<br>';
 	}
 
 	if(empty($_POST['category_id'])) {
 		$valid = 0;
-		$error_message .= 'You must have to select a category<br>';
+		$error_message .= 'Bạn phải chọn một danh mục<br>';
 	}
 
 
@@ -43,7 +43,7 @@ if(isset($_POST['form1'])) {
         $file_name = basename( $path, '.' . $ext );
         if( $ext!='jpg' && $ext!='png' && $ext!='jpeg' && $ext!='gif' ) {
             $valid = 0;
-            $error_message .= 'You must have to upload jpg, jpeg, gif or png file<br>';
+            $error_message .= 'Bạn phải tải lên tệp JPG, JPEG, GIF hoặc PNG<br>';
         }
     }
 	
@@ -88,14 +88,14 @@ if(isset($_POST['form1'])) {
 			$statement->execute(array($_POST['post_title'],$post_slug,$_POST['post_content'],$_POST['post_date'],$final_name,$_POST['category_id'],0,$_POST['meta_title'],$_POST['meta_keyword'],$_POST['meta_description']));
 		}
 	
-		$success_message = 'Post is added successfully!';
+		$success_message = 'Bài đăng được thêm thành công!';
 	}
 }
 ?>
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Add Post</h1>
+		<h1>Thêm bài viết</h1>
 	</div>
 	<div class="content-header-right">
 		<a href="post.php" class="btn btn-primary btn-sm">Xem tất cả</a>
@@ -126,40 +126,40 @@ if(isset($_POST['form1'])) {
 				<div class="box box-info">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Post Title <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Tiêu đề bài viết <span>*</span></label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" name="post_title" placeholder="Example: Post Headline">
+								<input type="text" class="form-control" name="post_title" placeholder="Ví dụ: bài tiêu đề">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Post Slug </label>
+							<label for="" class="col-sm-2 control-label">Đăng slug </label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" name="post_slug" placeholder="Example: post-headline">
+								<input type="text" class="form-control" name="post_slug" placeholder="Ví dụ: tiêu đề sau">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Post Content <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Nội dung bài viết <span>*</span></label>
 							<div class="col-sm-9">
 								<textarea class="form-control" name="post_content" id="editor1"></textarea>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Post Publish Date <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Đăng ngày xuất bản <span>*</span></label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" name="post_date" id="datepicker" value="<?php echo date('d-m-Y'); ?>">(Format: dd-mm-yy)
+								<input type="text" class="form-control" name="post_date" id="datepicker" value="<?php echo date('d-m-Y'); ?>">(Định dạng: dd-mm-YY)
 							</div>
 						</div>
 						<div class="form-group">
-				            <label for="" class="col-sm-2 control-label">Featured Photo</label>
+				            <label for="" class="col-sm-2 control-label">Hình nổi bật</label>
 				            <div class="col-sm-6" style="padding-top:6px;">
 				                <input type="file" name="photo">
 				            </div>
 				        </div>
 						<div class="form-group">
-				            <label for="" class="col-sm-2 control-label">Select Category <span>*</span></label>
+				            <label for="" class="col-sm-2 control-label">Chọn danh mục <span>*</span></label>
 				            <div class="col-sm-3">
 				            	<select class="form-control select2" name="category_id">
-				            		<option value="">Select a category</option>
+				            		<option value="">Chọn một danh mục</option>
 				            		<?php
 						            	$i=0;
 						            	$statement = $pdo->prepare("SELECT * FROM tbl_category ORDER BY category_name ASC");
@@ -174,21 +174,21 @@ if(isset($_POST['form1'])) {
 				            	</select>
 				            </div>
 				        </div>
-						<h3 class="seo-info">SEO Information</h3>
+						<h3 class="seo-info">SEO Thông tin</h3>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Meta Title </label>
+							<label for="" class="col-sm-2 control-label">Thẻ tiêu đề </label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" name="meta_title">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Meta Keywords </label>
+							<label for="" class="col-sm-2 control-label">Thẻ từ khóa </label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" name="meta_keyword">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Meta Description </label>
+							<label for="" class="col-sm-2 control-label">Thẻ mô tả </label>
 							<div class="col-sm-9">
 								<textarea class="form-control" name="meta_description" style="height:200px;"></textarea>
 							</div>
@@ -196,7 +196,7 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-2 control-label"></label>
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-success pull-left" name="form1">Submit</button>
+								<button type="submit" class="btn btn-success pull-left" name="form1">Chấp nhận</button>
 							</div>
 						</div>
 					</div>

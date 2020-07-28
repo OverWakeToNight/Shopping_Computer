@@ -49,18 +49,18 @@ if(isset($_POST['form1'])) {
         }
         if($table_quantity[$temp_index] < $arr2[$i]) {
         	$allow_update = 0;
-            $error_message .= '"'.$arr2[$i].'" items are not available for "'.$arr3[$i].'"\n';
+            $error_message .= '"'.$arr2[$i].'" Các mặt hàng không có sẵn cho "'.$arr3[$i].'"\n';
         } else {
             $_SESSION['cart_p_qty'][$i] = $arr2[$i];
         }
     }
-    $error_message .= '\nOther items quantity are updated successfully!';
+    $error_message .= '\nSố lượng mục khác được cập nhật thành công!';
     ?>
     
     <?php if($allow_update == 0): ?>
     	<script>alert('<?php echo $error_message; ?>');</script>
 	<?php else: ?>
-		<script>alert('All Items Quantity Update is Successful!');</script>
+		<script>alert('Tất cả các mục số lượng Cập Nhật thành công!');</script>
 	<?php endif; ?>
     <?php
 
@@ -80,7 +80,7 @@ if(isset($_POST['form1'])) {
 			<div class="col-md-12">
 
                 <?php if(!isset($_SESSION['cart_p_id'])): ?>
-                    <?php echo 'Cart is empty'; ?>
+                    <?php echo 'Giỏ hàng trống'; ?>
                 <?php else: ?>
                 <form action="" method="post">
                     <?php $csrf->echoInputField(); ?>
@@ -191,7 +191,7 @@ if(isset($_POST['form1'])) {
                         </tr>
                         <?php endfor; ?>
                         <tr>
-                            <th colspan="7" class="total-text">Total</th>
+                            <th colspan="7" class="total-text">Tổng cộng</th>
                             <th class="total-amount"><?php echo LANG_VALUE_1; ?><?php echo $table_total_price; ?></th>
                             <th></th>
                         </tr>

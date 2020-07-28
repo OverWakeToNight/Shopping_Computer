@@ -5,7 +5,7 @@
 		<h1>Xem danh mục</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="category-add.php" class="btn btn-primary btn-sm">Add New</a>
+		<a href="category-add.php" class="btn btn-primary btn-sm">Thêm mới</a>
 	</div>
 </section>
 

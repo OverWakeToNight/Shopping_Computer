@@ -252,7 +252,7 @@ if( !isset($_REQUEST['id']) || !isset($_REQUEST['type']) ) {
                                                 <?php if($row['p_qty'] == 0): ?>
                                                     <div class="out-of-stock">
                                                         <div class="inner">
-                                                            Out Of Stock
+                                                            Hết hàng
                                                         </div>
                                                     </div>
                                                 <?php else: ?>

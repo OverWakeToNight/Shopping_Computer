@@ -482,7 +482,7 @@ foreach ($result as $row) {
 				<div class="menu-container">
 					<div class="menu">
 						<ul>
-							<li><a href="index.php">Home</a></li>
+							<li><a href="index.php">Trang chủ</a></li>
 							
 							<?php
 							$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE show_on_menu=1");
@@ -534,15 +534,7 @@ foreach ($result as $row) {
 								$vgallery_title = $row['vgallery_title'];
 							}
 							?>
-							<li><a href="#">Gallery</a>
-								<ul>
-									<li><a href="photo-gallery.php"><?php echo $pgallery_title; ?></a></li>
-									<li><a href="video-gallery.php"><?php echo $vgallery_title; ?></a></li>
-								</ul>
-							</li>
 							<li><a href="about.php"><?php echo $about_title; ?></a></li>
-							<li><a href="faq.php"><?php echo $faq_title; ?></a></li>
-							<li><a href="blog.php"><?php echo $blog_title; ?></a></li>
 							<li><a href="contact.php"><?php echo $contact_title; ?></a></li>
 						</ul>
 					</div>

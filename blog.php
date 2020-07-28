@@ -151,7 +151,7 @@ foreach ($result as $row) {
                                                 <?php echo substr($row['post_content'],0,200).' ...'; ?> 
                                             </p>
                                             <p class="button">
-                                                <a href="blog-single.php?slug=<?php echo $row['post_slug']; ?>">Read More</a>
+                                                <a href="blog-single.php?slug=<?php echo $row['post_slug']; ?>">Đọc thêm</a>
                                             </p>
                                         </div>
                                     </div>

@@ -6,7 +6,7 @@ if(isset($_POST['form1'])) {
 
     if(empty($_POST['size_name'])) {
         $valid = 0;
-        $error_message .= "Size Name can not be empty<br>";
+        $error_message .= "Tên kích thước không được để trống<br>";
     } else {
 		// Duplicate Size checking
     	// current size name that is in the database
@@ -22,7 +22,7 @@ if(isset($_POST['form1'])) {
     	$total = $statement->rowCount();							
     	if($total) {
     		$valid = 0;
-        	$error_message .= 'Size name already exists<br>';
+        	$error_message .= 'Tên kích thước đã tồn tại<br>';
     	}
     }
 
@@ -31,7 +31,7 @@ if(isset($_POST['form1'])) {
 		$statement = $pdo->prepare("UPDATE tbl_size SET size_name=? WHERE size_id=?");
 		$statement->execute(array($_POST['size_name'],$_REQUEST['id']));
 
-    	$success_message = 'Size is updated successfully.';
+    	$success_message = 'Kích thước được cập nhật thành công.';
     }
 }
 ?>
@@ -96,7 +96,7 @@ foreach ($result as $row) {
 
             <div class="box-body">
                 <div class="form-group">
-                    <label for="" class="col-sm-2 control-label">Size Name <span>*</span></label>
+                    <label for="" class="col-sm-2 control-label">Tên kích thước <span>*</span></label>
                     <div class="col-sm-4">
                         <input type="text" class="form-control" name="size_name" value="<?php echo $size_name; ?>">
                     </div>
@@ -104,7 +104,7 @@ foreach ($result as $row) {
                 <div class="form-group">
                 	<label for="" class="col-sm-2 control-label"></label>
                     <div class="col-sm-6">
-                      <button type="submit" class="btn btn-success pull-left" name="form1">Update</button>
+                      <button type="submit" class="btn btn-success pull-left" name="form1">Cập nhật</button>
                     </div>
                 </div>
 

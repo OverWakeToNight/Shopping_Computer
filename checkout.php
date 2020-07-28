@@ -312,7 +312,7 @@ if(!isset($_SESSION['cart_p_id'])) {
 		                <?php if($checkout_access == 0): ?>
 		                	<div class="col-md-12">
 				                <div style="color:red;font-size:22px;margin-bottom:50px;">
-			                        You must have to fill up all the billing and shipping information from your dashboard panel in order to checkout the order. Please fill up the information going to <a href="customer-billing-shipping-update.php" style="color:red;text-decoration:underline;">this link</a>.
+                                Bạn phải điền vào tất cả các thông tin thanh toán và vận chuyển từ bảng điều khiển của bạn để kiểm tra đơn đặt hàng. Xin vui lòng điền vào các thông tin sẽ   <a href="customer-billing-shipping-update.php" style="color:red;text-decoration:underline;">liên kết này</a>.
 			                    </div>
 	                    	</div>
 	                	<?php else: ?>

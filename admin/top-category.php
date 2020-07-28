@@ -2,10 +2,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Top Level Categories</h1>
+		<h1>Xem danh mục cao</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="top-category-add.php" class="btn btn-primary btn-sm">Add New</a>
+		<a href="top-category-add.php" class="btn btn-primary btn-sm">Thêm mới</a>
 	</div>
 </section>
 
@@ -22,10 +22,10 @@
           <table id="example1" class="table table-bordered table-striped">
 			<thead>
 			    <tr>
-			        <th>SL</th>
-			        <th>Top Category Name</th>
-                    <th>Show on Menu?</th>
-			        <th>Action</th>
+			        <th>ID</th>
+			        <th>Tên danh mục cao</th>
+                    <th>Hiển thị trên menu?</th>
+			        <th>Hoạt động</th>
 			    </tr>
 			</thead>
             <tbody>
@@ -50,8 +50,8 @@
                             ?>
                         </td>
 	                    <td>
-	                        <a href="top-category-edit.php?id=<?php echo $row['tcat_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-	                        <a href="#" class="btn btn-danger btn-xs" data-href="top-category-delete.php?id=<?php echo $row['tcat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
+	                        <a href="top-category-edit.php?id=<?php echo $row['tcat_id']; ?>" class="btn btn-primary btn-xs">Sửa</a>
+	                        <a href="#" class="btn btn-danger btn-xs" data-href="top-category-delete.php?id=<?php echo $row['tcat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Xóa</a>
 	                    </td>
 	                </tr>
             		<?php
@@ -75,11 +75,11 @@
             </div>
             <div class="modal-body">
                 <p>Bạn có chắc chắn muốn xóa nó ?</p>
-                <p style="color:red;">Be careful! All products, mid level categories and end level categories under this top lelvel category will be deleted from all the tables like order table, payment table, size table, color table, rating table etc.</p>
+                <p style="color:red;">Cẩn thận! Tất cả các sản phẩm, loại cấp trung và cấp độ cuối cùng theo thể loại này lelvel hàng đầu sẽ được xóa khỏi tất cả các bảng như trật tự bảng, bảng thanh toán, kích thước bảng, bảng màu, bảng xếp hạng vv</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <a class="btn btn-danger btn-ok">Xóa</a>
             </div>
         </div>
     </div>

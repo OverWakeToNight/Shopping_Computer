@@ -151,9 +151,9 @@ foreach ($result as $row) {
                         echo $adv_adsense_code[0];
                     } else {
                         if($adv_url[0]=='') {
-                            echo '<img src="assets/uploads/'.$adv_photo[0].'" alt="Advertisement">';
+                            echo '<img src="assets/uploads/'.$adv_photo[0].'" alt="Quảng cáo">';
                         } else {
-                            echo '<a href="'.$adv_url[0].'"><img src="assets/uploads/'.$adv_photo[0].'" alt="Advertisement"></a>';
+                            echo '<a href="'.$adv_url[0].'"><img src="assets/uploads/'.$adv_photo[0].'" alt="Quảng cáo"></a>';
                         }                               
                     }
                 ?>
@@ -192,9 +192,9 @@ foreach ($result as $row) {
                         echo $adv_adsense_code[1];
                     } else {
                         if($adv_url[1]=='') {
-                            echo '<img src="assets/uploads/'.$adv_photo[1].'" alt="Advertisement">';
+                            echo '<img src="assets/uploads/'.$adv_photo[1].'" alt="Quảng cáo">';
                         } else {
-                            echo '<a href="'.$adv_url[1].'"><img src="assets/uploads/'.$adv_photo[1].'" alt="Advertisement"></a>';
+                            echo '<a href="'.$adv_url[1].'"><img src="assets/uploads/'.$adv_photo[1].'" alt="Quảng cáo"></a>';
                         }                               
                     }
                 ?>
@@ -315,11 +315,11 @@ foreach ($result as $row) {
                                 <?php if($row['p_qty'] == 0): ?>
                                     <div class="out-of-stock">
                                         <div class="inner">
-                                            Out Of Stock
+                                            Hết hàng
                                         </div>
                                     </div>
                                 <?php else: ?>
-                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>">Add to Cart</a></p>
+                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>">Thêm vào giỏ hàng</a></p>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -345,9 +345,9 @@ foreach ($result as $row) {
                         echo $adv_adsense_code[2];
                     } else {
                         if($adv_url[2]=='') {
-                            echo '<img src="assets/uploads/'.$adv_photo[2].'" alt="Advertisement">';
+                            echo '<img src="assets/uploads/'.$adv_photo[2].'" alt="Quảng cáo">';
                         } else {
-                            echo '<a href="'.$adv_url[2].'"><img src="assets/uploads/'.$adv_photo[2].'" alt="Advertisement"></a>';
+                            echo '<a href="'.$adv_url[2].'"><img src="assets/uploads/'.$adv_photo[2].'" alt="Quảng cáo"></a>';
                         }                               
                     }
                 ?>
@@ -467,11 +467,11 @@ foreach ($result as $row) {
                                 <?php if($row['p_qty'] == 0): ?>
                                     <div class="out-of-stock">
                                         <div class="inner">
-                                            Out Of Stock
+                                            Hết hàng
                                         </div>
                                     </div>
                                 <?php else: ?>
-                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>">Add to Cart</a></p>
+                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>">Thêm vào giỏ hàng</a></p>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -499,9 +499,9 @@ foreach ($result as $row) {
                         echo $adv_adsense_code[3];
                     } else {
                         if($adv_url[3]=='') {
-                            echo '<img src="assets/uploads/'.$adv_photo[3].'" alt="Advertisement">';
+                            echo '<img src="assets/uploads/'.$adv_photo[3].'" alt="Quảng cáo">';
                         } else {
-                            echo '<a href="'.$adv_url[3].'"><img src="assets/uploads/'.$adv_photo[3].'" alt="Advertisement"></a>';
+                            echo '<a href="'.$adv_url[3].'"><img src="assets/uploads/'.$adv_photo[3].'" alt="Quảng cáo"></a>';
                         }                               
                     }
                 ?>
@@ -622,11 +622,11 @@ foreach ($result as $row) {
                                 <?php if($row['p_qty'] == 0): ?>
                                     <div class="out-of-stock">
                                         <div class="inner">
-                                            Out Of Stock
+                                          Hết hàng
                                         </div>
                                     </div>
                                 <?php else: ?>
-                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>">Add to Cart</a></p>
+                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>">Thêm vào giỏ hàng</a></p>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -653,9 +653,9 @@ foreach ($result as $row) {
                         echo $adv_adsense_code[4];
                     } else {
                         if($adv_url[4]=='') {
-                            echo '<img src="assets/uploads/'.$adv_photo[4].'" alt="Advertisement">';
+                            echo '<img src="assets/uploads/'.$adv_photo[4].'" alt="Quảng cáo">';
                         } else {
-                            echo '<a href="'.$adv_url[4].'"><img src="assets/uploads/'.$adv_photo[4].'" alt="Advertisement"></a>';
+                            echo '<a href="'.$adv_url[4].'"><img src="assets/uploads/'.$adv_photo[4].'" alt="Quảng cáo"></a>';
                         }                               
                     }
                 ?>
@@ -725,7 +725,7 @@ foreach ($result as $row) {
 
 
 
-<?php if($home_blog_on_off == 1): ?>
+<!-- <?php if($home_blog_on_off == 1): ?>
 <div class="home-blog bg-gray">
     <div class="container">
         <div class="row">
@@ -757,7 +757,7 @@ foreach ($result as $row) {
                                 <?php echo substr($row['post_content'],0,200).' ...'; ?>
                             </p>
                             <p class="button">
-                                <a href="blog-single.php?slug=<?php echo $row['post_slug']; ?>">Read More</a>
+                                <a href="blog-single.php?slug=<?php echo $row['post_slug']; ?>">Đọc thêm</a>
                             </p>
                         </div>
                     </div>
@@ -768,6 +768,6 @@ foreach ($result as $row) {
         </div>
     </div>
 </div>
-<?php endif; ?>
+<?php endif; ?> -->
 
 <?php require_once('footer.php'); ?>

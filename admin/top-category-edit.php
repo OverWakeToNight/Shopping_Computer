@@ -6,7 +6,7 @@ if(isset($_POST['form1'])) {
 
     if(empty($_POST['tcat_name'])) {
         $valid = 0;
-        $error_message .= "Top Category Name can not be empty<br>";
+        $error_message .= "Tên danh mục cao không được để trống<br>";
     } else {
 		// Duplicate Top Category checking
     	// current Top Category name that is in the database
@@ -22,7 +22,7 @@ if(isset($_POST['form1'])) {
     	$total = $statement->rowCount();							
     	if($total) {
     		$valid = 0;
-        	$error_message .= 'Top Category name already exists<br>';
+        	$error_message .= 'Tên danh mục cao đã tồn tại<br>';
     	}
     }
 
@@ -31,7 +31,7 @@ if(isset($_POST['form1'])) {
 		$statement = $pdo->prepare("UPDATE tbl_top_category SET tcat_name=?,show_on_menu=? WHERE tcat_id=?");
 		$statement->execute(array($_POST['tcat_name'],$_POST['show_on_menu'],$_REQUEST['id']));
 
-    	$success_message = 'Top Category is updated successfully.';
+    	$success_message = 'Danh mục cao cập nhật thành công.';
     }
 }
 ?>
@@ -97,24 +97,24 @@ foreach ($result as $row) {
 
             <div class="box-body">
                 <div class="form-group">
-                    <label for="" class="col-sm-2 control-label">Top Category Name <span>*</span></label>
+                    <label for="" class="col-sm-2 control-label">Tên danh mục cao<span>*</span></label>
                     <div class="col-sm-4">
                         <input type="text" class="form-control" name="tcat_name" value="<?php echo $tcat_name; ?>">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="" class="col-sm-2 control-label">Show on Menu? <span>*</span></label>
+                    <label for="" class="col-sm-2 control-label">Hiển thị ra menu? <span>*</span></label>
                     <div class="col-sm-4">
                         <select name="show_on_menu" class="form-control" style="width:auto;">
-                            <option value="0" <?php if($show_on_menu == 0) {echo 'selected';} ?>>No</option>
-                            <option value="1" <?php if($show_on_menu == 1) {echo 'selected';} ?>>Yes</option>
+                            <option value="0" <?php if($show_on_menu == 0) {echo 'selected';} ?>>Không</option>
+                            <option value="1" <?php if($show_on_menu == 1) {echo 'selected';} ?>>Có</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
                 	<label for="" class="col-sm-2 control-label"></label>
                     <div class="col-sm-6">
-                      <button type="submit" class="btn btn-success pull-left" name="form1">Update</button>
+                      <button type="submit" class="btn btn-success pull-left" name="form1">Cập nhật</button>
                     </div>
                 </div>
 

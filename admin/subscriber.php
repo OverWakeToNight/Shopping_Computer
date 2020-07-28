@@ -2,11 +2,11 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Subscriber</h1>
+		<h1>Người đăng ký</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="subscriber-remove.php" class="btn btn-primary btn-sm">Remove Pending Subscribers</a>
-		<a href="subscriber-csv.php" class="btn btn-primary btn-sm">Export as CSV</a>
+		<a href="subscriber-remove.php" class="btn btn-primary btn-sm">Xóa người đăng ký đang chờ xử lý</a>
+		<a href="subscriber-csv.php" class="btn btn-primary btn-sm">Xuất ra CSV</a>
 	</div>
 </section>
 
@@ -19,9 +19,9 @@
           <table id="example1" class="table table-bordered table-striped">
 			<thead>
 			    <tr>
-			        <th>SL</th>
-			        <th>Subscriber Email</th>
-			        <th>Action</th>
+			        <th>ID</th>
+			        <th>Người đăng ký email</th>
+			        <th>Hoạt động</th>
 			    </tr>
 			</thead>
             <tbody>
@@ -36,7 +36,7 @@
 					<tr>
 	                    <td><?php echo $i; ?></td>
 	                    <td><?php echo $row['subs_email']; ?></td>
-	                    <td><a href="#" class="btn btn-danger btn-xs" data-href="subscriber-delete.php?id=<?php echo $row['subs_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a></td>
+	                    <td><a href="#" class="btn btn-danger btn-xs" data-href="subscriber-delete.php?id=<?php echo $row['subs_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Xóa</a></td>
 	                </tr>
             		<?php
             	}
@@ -62,7 +62,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <a class="btn btn-danger btn-ok">Xóa</a>
             </div>
         </div>
     </div>

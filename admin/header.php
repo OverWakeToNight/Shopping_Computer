@@ -93,32 +93,32 @@ if(!isset($_SESSION['user'])) {
 
 			        <li class="treeview <?php if($cur_page == 'index.php') {echo 'active';} ?>">
 			          <a href="index.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Dashboard</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Bảng điều khiển</span>
 			          </a>
 			        </li>
 
 					
 			        <li class="treeview <?php if( ($cur_page == 'settings.php') ) {echo 'active';} ?>">
 			          <a href="settings.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Settings</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Cài đặt</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview <?php if( ($cur_page == 'slider.php') ) {echo 'active';} ?>">
 			          <a href="slider.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Slider</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Chuyển trang</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview <?php if( ($cur_page == 'service.php') ) {echo 'active';} ?>">
 			          <a href="service.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Service</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Dịch vụ</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview <?php if( ($cur_page == 'testimonial.php') ) {echo 'active';} ?>">
 			          <a href="testimonial.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Testimonial</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Khách hàng chứng thực</span>
 			          </a>
 			        </li>
 
@@ -131,118 +131,118 @@ if(!isset($_SESSION['user'])) {
 			        <li class="treeview <?php if( ($cur_page == 'photo.php') || ($cur_page == 'video.php') ) {echo 'active';} ?>">
 						<a href="#">
 							<i class="fa fa-hand-o-right"></i>
-							<span>Gallery</span>
+							<span>Thư viện</span>
 							<span class="pull-right-container">
 								<i class="fa fa-angle-left pull-right"></i>
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="photo.php"><i class="fa fa-circle-o"></i> Photo Gallery</a></li>
-							<li><a href="video.php"><i class="fa fa-circle-o"></i> Video Gallery</a></li>
+							<li><a href="photo.php"><i class="fa fa-circle-o"></i> Thư viện hình ảnh</a></li>
+							<li><a href="video.php"><i class="fa fa-circle-o"></i> Thư viện video</a></li>
 						</ul>
 					</li>
 
 					<li class="treeview <?php if( ($cur_page == 'post.php') ||($cur_page == 'post-add.php') ||($cur_page == 'post-edit.php') || ($cur_page == 'category.php') || ($cur_page == 'category-add.php') || ($cur_page == 'category-edit.php') ) {echo 'active';} ?>">
 						<a href="#">
 							<i class="fa fa-hand-o-right"></i>
-							<span>Blog Posts</span>
+							<span>Tin bài viết</span>
 							<span class="pull-right-container">
 								<i class="fa fa-angle-left pull-right"></i>
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="category.php"><i class="fa fa-circle-o"></i> Category</a></li>
-							<li><a href="post.php"><i class="fa fa-circle-o"></i> Posts</a></li>
+							<li><a href="category.php"><i class="fa fa-circle-o"></i> Danh mục</a></li>
+							<li><a href="post.php"><i class="fa fa-circle-o"></i> Đăng</a></li>
 						</ul>
 					</li>
 
 					<li class="treeview <?php if( ($cur_page == 'size.php') || ($cur_page == 'size-add.php') || ($cur_page == 'size-edit.php') || ($cur_page == 'color.php') || ($cur_page == 'color-add.php') || ($cur_page == 'color-edit.php') || ($cur_page == 'country.php') || ($cur_page == 'country-add.php') || ($cur_page == 'country-edit.php') || ($cur_page == 'shipping-cost.php') || ($cur_page == 'shipping-cost-edit.php') || ($cur_page == 'top-category.php') || ($cur_page == 'top-category-add.php') || ($cur_page == 'top-category-edit.php') || ($cur_page == 'mid-category.php') || ($cur_page == 'mid-category-add.php') || ($cur_page == 'mid-category-edit.php') || ($cur_page == 'end-category.php') || ($cur_page == 'end-category-add.php') || ($cur_page == 'end-category-edit.php') ) {echo 'active';} ?>">
 						<a href="#">
 							<i class="fa fa-hand-o-right"></i>
-							<span>Shop Section</span>
+							<span>Phần cửa hàng</span>
 							<span class="pull-right-container">
 								<i class="fa fa-angle-left pull-right"></i>
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="size.php"><i class="fa fa-circle-o"></i> Size</a></li>
-							<li><a href="color.php"><i class="fa fa-circle-o"></i> Color</a></li>
-							<li><a href="country.php"><i class="fa fa-circle-o"></i> Country</a></li>
-							<li><a href="shipping-cost.php"><i class="fa fa-circle-o"></i> Shipping Cost</a></li>
-							<li><a href="top-category.php"><i class="fa fa-circle-o"></i> Top Level Category</a></li>
-							<li><a href="mid-category.php"><i class="fa fa-circle-o"></i> Mid Level Category</a></li>
-							<li><a href="end-category.php"><i class="fa fa-circle-o"></i> End Level Category</a></li>
+							<li><a href="size.php"><i class="fa fa-circle-o"></i> Kích thước</a></li>
+							<li><a href="color.php"><i class="fa fa-circle-o"></i> Màu sắc</a></li>
+							<li><a href="country.php"><i class="fa fa-circle-o"></i> Xuất xứ</a></li>
+							<li><a href="shipping-cost.php"><i class="fa fa-circle-o"></i>Chi phí vận chuyển</a></li>
+							<li><a href="top-category.php"><i class="fa fa-circle-o"></i> Danh mục cấp cao</a></li>
+							<li><a href="mid-category.php"><i class="fa fa-circle-o"></i> Danh mục trung</a></li>
+							<li><a href="end-category.php"><i class="fa fa-circle-o"></i> Danh mục thấp</a></li>
 						</ul>
 					</li>
 
 
 					<li class="treeview <?php if( ($cur_page == 'product.php') || ($cur_page == 'product-add.php') || ($cur_page == 'product-edit.php') ) {echo 'active';} ?>">
 			          <a href="product.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Product</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Sản phẩm</span>
 			          </a>
 			        </li>
 
 
 			        <li class="treeview <?php if( ($cur_page == 'order.php') ) {echo 'active';} ?>">
 			          <a href="order.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Order</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Đặt hàng</span>
 			          </a>
 			        </li>
 
 
 			        <li class="treeview <?php if( ($cur_page == 'rating.php') ) {echo 'active';} ?>">
 			          <a href="rating.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Rating</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Đánh giá</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview <?php if( ($cur_page == 'language.php') ) {echo 'active';} ?>">
 			          <a href="language.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Language Settings</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Cài đặt ngôn ngữ</span>
 			          </a>
 			        </li>
 					
 					<li class="treeview <?php if( ($cur_page == 'customer-message.php') ) {echo 'active';} ?>">
 						<a href="#">
 							<i class="fa fa-hand-o-right"></i>
-							<span>Message</span>
+							<span>Tin nhắn</span>
 							<span class="pull-right-container">
 								<i class="fa fa-angle-left pull-right"></i>
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="customer-message.php"><i class="fa fa-circle-o"></i> Customer Message</a></li>
+							<li><a href="customer-message.php"><i class="fa fa-circle-o"></i> Tin nhắn khách hàng</a></li>
 						</ul>
 					</li>
 
 
 					<li class="treeview <?php if( ($cur_page == 'customer.php') || ($cur_page == 'customer-add.php') || ($cur_page == 'customer-edit.php') ) {echo 'active';} ?>">
 			          <a href="customer.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Customer</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Khách hàng</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview <?php if( ($cur_page == 'page.php') ) {echo 'active';} ?>">
 			          <a href="page.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Page</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Trang</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview <?php if( ($cur_page == 'social-media.php') ) {echo 'active';} ?>">
 			          <a href="social-media.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Social Media</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Mạng truyền thông</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview <?php if( ($cur_page == 'advertisement.php') ) {echo 'active';} ?>">
 			          <a href="advertisement.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Advertisement</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Quảng cáo</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview <?php if( ($cur_page == 'subscriber.php')||($cur_page == 'subscriber.php') ) {echo 'active';} ?>">
 			          <a href="subscriber.php">
-			            <i class="fa fa-hand-o-right"></i> <span>Subscriber</span>
+			            <i class="fa fa-hand-o-right"></i> <span>Người đăng ký</span>
 			          </a>
 			        </li>
 

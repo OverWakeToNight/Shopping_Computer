@@ -238,11 +238,11 @@ foreach ($result as $row) {
                                             <?php if($row['p_qty'] == 0): ?>
                                                 <div class="out-of-stock">
                                                     <div class="inner">
-                                                        Out Of Stock
+                                                       Hết hàng
                                                     </div>
                                                 </div>
                                             <?php else: ?>
-                                                <p><a href="product.php?id=<?php echo $row['p_id']; ?>">Add to Cart</a></p>
+                                                <p><a href="product.php?id=<?php echo $row['p_id']; ?>">Thêm vào giỏ hàng</a></p>
                                             <?php endif; ?>
                                         </div>
                                     </div>

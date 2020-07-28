@@ -6,12 +6,12 @@ if(isset($_POST['form1'])) {
 
 	if(empty($_POST['title'])) {
 		$valid = 0;
-		$error_message .= 'Title can not be empty<br>';
+		$error_message .= 'Tiêu đề không được để trống<br>';
 	}
 
 	if(empty($_POST['content'])) {
 		$valid = 0;
-		$error_message .= 'Content can not be empty<br>';
+		$error_message .= 'Nội dung không được để trống<br>';
 	}
 
 	$path = $_FILES['photo']['name'];
@@ -22,11 +22,11 @@ if(isset($_POST['form1'])) {
         $file_name = basename( $path, '.' . $ext );
         if( $ext!='jpg' && $ext!='png' && $ext!='jpeg' && $ext!='gif' ) {
             $valid = 0;
-            $error_message .= 'You must have to upload jpg, jpeg, gif or png file<br>';
+            $error_message .= 'Bạn phải tải lên tệp JPG, JPEG, GIF hoặc PNG<br>';
         }
     } else {
     	$valid = 0;
-        $error_message .= 'You must have to select a photo<br>';
+        $error_message .= 'Bạn phải chọn một ảnh<br>';
     }
 
 	if($valid == 1) {
@@ -47,7 +47,7 @@ if(isset($_POST['form1'])) {
 		$statement = $pdo->prepare("INSERT INTO tbl_service (title,content,photo) VALUES (?,?,?)");
 		$statement->execute(array($_POST['title'],$_POST['content'],$final_name));
 			
-		$success_message = 'Service is added successfully!';
+		$success_message = 'Dịch vụ được thêm thành công!';
 
 		unset($_POST['title']);
 		unset($_POST['content']);
@@ -57,7 +57,7 @@ if(isset($_POST['form1'])) {
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Add Service</h1>
+		<h1>Thêm dịch vụ</h1>
 	</div>
 	<div class="content-header-right">
 		<a href="service.php" class="btn btn-primary btn-sm">Xem tất cả</a>
@@ -88,27 +88,27 @@ if(isset($_POST['form1'])) {
 				<div class="box box-info">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Title <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Tiêu đề <span>*</span></label>
 							<div class="col-sm-6">
 								<input type="text" autocomplete="off" class="form-control" name="title" value="<?php if(isset($_POST['title'])){echo $_POST['title'];} ?>">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Content <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Nội dung <span>*</span></label>
 							<div class="col-sm-6">
 								<textarea class="form-control" name="content" style="height:200px;"><?php if(isset($_POST['content'])){echo $_POST['content'];} ?></textarea>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Photo <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Hình <span>*</span></label>
 							<div class="col-sm-9" style="padding-top:5px">
-								<input type="file" name="photo">(Only jpg, jpeg, gif and png are allowed)
+								<input type="file" name="photo">(Chỉ jpg, jpeg, gif and png được phép)
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="" class="col-sm-2 control-label"></label>
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-success pull-left" name="form1">Submit</button>
+								<button type="submit" class="btn btn-success pull-left" name="form1">Chấp nhận</button>
 							</div>
 						</div>
 					</div>

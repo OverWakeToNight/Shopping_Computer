@@ -9,7 +9,7 @@ foreach ($result as $row) {
 ?>
 <div class="sidebar">
     <div class="widget">
-        <h4>Categories</h4>
+        <h4>Danh mục</h4>
         <ul>
             <?php
             $statement = $pdo->prepare("SELECT * FROM tbl_category ORDER BY category_name ASC");
@@ -24,7 +24,7 @@ foreach ($result as $row) {
         </ul>
     </div>
     <div class="widget">
-        <h4>Latest Posts</h4>
+        <h4>Bài viết mới nhất</h4>
         <ul>
             <?php
             $i = 0;
@@ -44,7 +44,7 @@ foreach ($result as $row) {
         </ul>
     </div>
     <div class="widget">
-        <h4>Popular Posts</h4>
+        <h4>Bài viết phổ biến</h4>
         <ul>
             <?php
             $i = 0;

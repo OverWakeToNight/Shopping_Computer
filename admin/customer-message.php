@@ -2,7 +2,7 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Select Customer</h1>
+		<h1>Chọn khách hàng</h1>
 	</div>
 </section>
 
@@ -14,7 +14,7 @@
 				<div class="box box-info">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Select a Customer <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Chọn một khách hàng <span>*</span></label>
 							<div class="col-sm-4">
 								<select name="cust_id" class="form-control select2">
 								<?php
@@ -34,7 +34,7 @@
 						<div class="form-group">
 							<label for="" class="col-sm-2 control-label"></label>
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-success pull-left" name="form1">Submit</button>
+								<button type="submit" class="btn btn-success pull-left" name="form1">Chấp nhận</button>
 							</div>
 						</div>
 					</div>
@@ -62,10 +62,10 @@
 					<table id="example1" class="table table-bordered table-striped">
 						<thead>
 							<tr>
-								<th width="30">SL</th>
-								<th width="100">Subject</th>
-								<th width="200">Message</th>
-								<th width="200">Order Details</th>
+								<th width="30">ID</th>
+								<th width="100">Đối tượng</th>
+								<th width="200">Tin nhắn</th>
+								<th width="200">Chi tiết đặt hàng</th>
 							</tr>
 						</thead>
 						<tbody>

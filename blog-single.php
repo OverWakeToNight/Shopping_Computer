@@ -46,14 +46,14 @@ foreach ($result as $row) {
                                         <?php echo $post_content; ?>
                                     </p>
 
-                                    <h3>Share This</h3>
+                                    <h3>Chia sẻ</h3>
                                     <div class="sharethis-inline-share-buttons"></div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h3>Comments</h3>
+                                    <h3>Bình luận</h3>
                                     <div class="fb-comments" data-href="<?php echo BASE_URL.'blog-single.php?slug='.$_REQUEST['slug']; ?>" data-numposts="5"></div>
                                 </div>
                             </div>

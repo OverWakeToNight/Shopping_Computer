@@ -73,10 +73,10 @@ foreach ($result as $row)
 							$verification_url = BASE_URL.'verify-subscriber.php?email='.$to.'&key='.$key;
 
 							$message = '
-Thanks for your interest to subscribe our newsletter!<br><br>
-Please click this link to confirm your subscription:
+							Cảm ơn bạn đã quan tâm đến đăng ký nhận bản tin của chúng tôi!<br><br>
+							Hãy nhấp vào liên kết này để xác nhận đăng ký của bạn:
 					'.$verification_url.'<br><br>
-This link will be active only for 24 hours.
+					Liên kết này sẽ chỉ hoạt động trong 24 giờ.
 					';
 
 							
@@ -95,8 +95,8 @@ This link will be active only for 24 hours.
 						
 							    $success_message1 = LANG_VALUE_136;   
 							} catch (Exception $e) {
-							    echo 'Message could not be sent.';
-							    echo 'Mailer Error: ' . $mail->ErrorInfo;
+							    echo 'Không thể gửi thư.';
+							    echo 'Mailer Lỗi: ' . $mail->ErrorInfo;
 							}
 							
 							
@@ -273,7 +273,7 @@ foreach ($result as $row) {
                	$('#paypal_form').hide();
 				$('#stripe_form').show();
 				$('#bank_form').hide();
-            } else if ( advFieldsStatus == 'Bank Deposit' ) {
+            } else if ( advFieldsStatus == 'Tài khoản ngân hàng' ) {
             	$('#paypal_form').hide();
 				$('#stripe_form').hide();
 				$('#bank_form').show();

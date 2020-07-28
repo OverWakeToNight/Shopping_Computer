@@ -26,7 +26,7 @@ $statement->execute(array('',1,$_REQUEST['email']));
 
 <div class="page-banner" style="background-color:#444;">
     <div class="inner">
-        <h1>Subscription Successful</h1>
+        <h1>Đăng ký thành công</h1>
     </div>
 </div>
 
@@ -35,7 +35,7 @@ $statement->execute(array('',1,$_REQUEST['email']));
         <div class="row">
             <div class="col-md-12">
                 <div class="user-content" style="color:green;">
-                    Thank you for verifying your subscription.
+                Cảm ơn bạn đã xác minh đăng ký của bạn.
                 </div>                
             </div>
         </div>

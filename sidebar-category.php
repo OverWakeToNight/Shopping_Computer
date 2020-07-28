@@ -87,9 +87,9 @@ foreach ($result as $row) {
                     echo $adv_adsense_code;
                 } else {
                     if($adv_url=='') {
-                        echo '<img src="assets/uploads/'.$adv_photo.'" alt="Advertisement">';
+                        echo '<img src="assets/uploads/'.$adv_photo.'" alt="Quảng cáo">';
                     } else {
-                        echo '<a href="'.$adv_url.'"><img src="assets/uploads/'.$adv_photo.'" alt="Advertisement"></a>';
+                        echo '<a href="'.$adv_url.'"><img src="assets/uploads/'.$adv_photo.'" alt="Quảng cáo"></a>';
                     }                               
                 }
             ?>

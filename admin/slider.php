@@ -2,10 +2,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Sliders</h1>
+		<h1>Xem chuyển trang</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="slider-add.php" class="btn btn-primary btn-sm">Add Slider</a>
+		<a href="slider-add.php" class="btn btn-primary btn-sm">Thêm chuyển trang</a>
 	</div>
 </section>
 
@@ -17,14 +17,14 @@
 					<table id="example1" class="table table-bordered table-striped">
 						<thead>
 							<tr>
-								<th>SL</th>
-								<th>Photo</th>
-								<th>Heading</th>
-								<th>Content</th>
-								<th>Button Text</th>
-								<th>Button URL</th>
-								<th>Position</th>
-								<th width="140">Action</th>
+								<th>ID</th>
+								<th>Hình</th>
+								<th>Nhóm</th>
+								<th>Nội dụng</th>
+								<th>Nút văn bản</th>
+								<th>Nút URL</th>
+								<th>Vị trí</th>
+								<th width="140">Hoạt động</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -57,8 +57,8 @@
 									<td><?php echo $row['button_url']; ?></td>
 									<td><?php echo $row['position']; ?></td>
 									<td>										
-										<a href="slider-edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="slider-delete.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
+										<a href="slider-edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-xs">Sửa</a>
+										<a href="#" class="btn btn-danger btn-xs" data-href="slider-delete.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete">Xóa</a>  
 									</td>
 								</tr>
 								<?php
@@ -85,7 +85,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <a class="btn btn-danger btn-ok">Xóa</a>
             </div>
         </div>
     </div>
